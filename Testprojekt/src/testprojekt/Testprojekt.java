@@ -46,7 +46,7 @@ public class Testprojekt extends Application {
     TextField textInput6 = new TextField("0");
     
     //Hier wrden die Zahlen alle mittig ins Textfeld geschrieben
-    textInput1.setAlignment(Pos.CENTER);
+    //textInput1.setAlignment(Pos.CENTER);
     textInput2.setAlignment(Pos.CENTER);
     textInput3.setAlignment(Pos.CENTER);
     textInput4.setAlignment(Pos.CENTER);

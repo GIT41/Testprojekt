@@ -17,4 +17,18 @@ public float malzwei(float[] numbers)
 float doppelt = 2*numbers[0];
 return doppelt;   
 }
+
+public static void swap(float[] numbers, int a, int b) {
+	float c = numbers[a];
+	numbers[a] = numbers[b];
+	numbers[b] = c;
+}
+
+public static void bubble(float[] numbers) {
+	for(int lt = 0; lt < numbers.length - 1; lt++)
+		for(int i = lt; i < numbers.length - 1; i++)
+			if (numbers[i] > numbers[i + 1])
+				swap(numbers, i, i + 1);
+}
+
 }

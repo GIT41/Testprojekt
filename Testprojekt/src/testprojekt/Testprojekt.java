@@ -66,13 +66,24 @@ public class Testprojekt extends Application {
         
         Button bubble = new Button();
         bubble.setText("Bubble");
-        bubble.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Bubble");
-            }
-        });
+        bubble.setOnAction((ActionEvent event) -> {
+			float[] nums = new float[] {
+				Float.valueOf(textInput1.getText()),
+				Float.valueOf(textInput2.getText()),
+				Float.valueOf(textInput3.getText()),
+				Float.valueOf(textInput4.getText()),
+				Float.valueOf(textInput5.getText()),
+				Float.valueOf(textInput6.getText())
+			};
+			
+			rechner.bubble(nums);
+			textInput1.setText(Float.toString(nums[0]));
+			textInput2.setText(Float.toString(nums[1]));
+			textInput3.setText(Float.toString(nums[2]));
+			textInput4.setText(Float.toString(nums[3]));
+			textInput5.setText(Float.toString(nums[4]));
+			textInput6.setText(Float.toString(nums[5]));
+		});
         
         Button partner = new Button();
         partner.setText("Partnertausch");

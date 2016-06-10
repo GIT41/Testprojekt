@@ -5,6 +5,7 @@
  */
 package testprojekt;
 
+import java.text.MessageFormat;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -150,7 +151,19 @@ public class Testprojekt extends Application {
             
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Selection");
+                numbers[0] = Float.valueOf(textInput1.getText());
+                numbers[1] = Float.valueOf(textInput2.getText());
+                numbers[2] = Float.valueOf(textInput3.getText());
+                numbers[3] = Float.valueOf(textInput4.getText());
+                numbers[4] = Float.valueOf(textInput5.getText());
+                numbers[5] = Float.valueOf(textInput6.getText());
+                
+                float[] sorted = rechner.selection(numbers);
+                System.out.print("Selection sorted: |   ");
+                for (int i = 0; i < sorted.length; i++){
+                    System.out.print(MessageFormat.format("{0}  |   ", sorted[i]));
+                }
+                System.out.print("\n");
             }
         });
         

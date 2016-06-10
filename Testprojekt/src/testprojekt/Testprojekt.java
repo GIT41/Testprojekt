@@ -143,6 +143,34 @@ public class Testprojekt extends Application {
             }
         });
         
+        Button minimum = new Button();
+        minimum.setText("Minimum");
+        minimum.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                
+                float a = Float.valueOf(textInput1.getText());
+                float b = Float.valueOf(textInput2.getText());
+                float c = Float.valueOf(textInput3.getText());
+                float d = Float.valueOf(textInput4.getText());
+                float e = Float.valueOf(textInput5.getText());
+                float f = Float.valueOf(textInput6.getText());
+                numbers[0] = a;
+                numbers[1] = b;
+                numbers[2] = c;
+                numbers[3] = d;
+                numbers[4] = e;
+                numbers[5] = f;
+                
+                
+                
+               float minimum = rechner.minimum(numbers);
+                
+                System.out.println("minimum : " +minimum );
+            }
+        });
+        
     
            
         //GUI erstellen
@@ -160,6 +188,7 @@ public class Testprojekt extends Application {
         myGrid.add(partner, 2, 5);
         myGrid.add(swapFirstLast, 2, 6);
         myGrid.add(haelfte, 3, 1);
+        myGrid.add(minimum, 3, 2);
    
               
         Scene scene = new Scene(myGrid, 600, 250);

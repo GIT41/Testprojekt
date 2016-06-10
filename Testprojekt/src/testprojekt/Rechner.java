@@ -17,4 +17,18 @@ public float malzwei(float[] numbers)
 float doppelt = 2*numbers[0];
 return doppelt;   
 }
+
+public float minimum(float[] numbers)
+{
+      
+     float minimum = numbers[0];  
+     for(int i=0;i<numbers.length;i++){  
+     if(minimum > numbers[i]){  
+     minimum = numbers[i];  
+        }  
+     }  
+    return minimum;  
+}  
+     
 }
+

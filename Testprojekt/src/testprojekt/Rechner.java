@@ -17,4 +17,15 @@ public float malzwei(float[] numbers)
 float doppelt = 2*numbers[0];
 return doppelt;   
 }
+
+
+public float summe (float[] numbers)
+{
+    
+         float sum = 0;
+    for(int i=0; i<5; i++){
+        sum = sum +numbers[i];
+        }
+    return sum;   
+}
 }

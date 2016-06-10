@@ -73,6 +73,38 @@ public class Testprojekt extends Application {
                 System.out.println("Bubble");
             }
         });
+         Button summe = new Button();
+        summe.setText("Summe");
+        summe.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                try
+                {
+                    float a = Float.valueOf(textInput1.getText());
+                    float b = Float.valueOf(textInput2.getText());
+                    float c = Float.valueOf(textInput3.getText());
+                    float d = Float.valueOf(textInput4.getText());
+                    float e = Float.valueOf(textInput5.getText());
+                    float f = Float.valueOf(textInput6.getText());
+                    numbers[0] = a;
+                    numbers[1] = b;
+                    numbers[2] = c;
+                    numbers[3] = d;
+                    numbers[4] = e;
+                    numbers[5] = f;
+
+                    float summe = rechner.summe(numbers);
+
+                    System.out.println(summe);
+                }
+                catch(Exception e){
+                    System.out.println("Fehlerhafte Eingabe, bitte Wiederholen. Kommata müssen als Punkte gesetzt werden.");
+
+                }
+                    
+            }
+        });
         
         Button partner = new Button();
         partner.setText("Partnertausch");
@@ -160,6 +192,7 @@ public class Testprojekt extends Application {
         myGrid.add(partner, 2, 5);
         myGrid.add(swapFirstLast, 2, 6);
         myGrid.add(haelfte, 3, 1);
+        myGrid.add(summe, 3,2);
    
               
         Scene scene = new Scene(myGrid, 600, 250);
